@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
 Sitemap: https://baf771773-cloud.github.io/ChernoFF.-Car-Wash/sitemap.xml
