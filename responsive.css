@@ -1,0 +1,593 @@
+/* Адаптив Логотипа*/
+/* ноутбуки */
+@media (max-width: 1400px) {
+    .logo {
+        max-width: 420px;
+    }
+}
+
+/* планшеты */
+@media (max-width: 900px) {
+    .logo {
+        max-width: 500px;
+    }
+    .logo-wrap {
+        transform: translateY(10px);
+    }
+}
+
+/* телефоны */
+@media (max-width: 500px) {
+    .logo {
+        max-width: 350px;
+    }
+
+    .logo.glow {
+        filter:
+            drop-shadow(0 0 4px #7a00ff)
+            drop-shadow(0 0 8px #5a00ff);
+    }
+
+    .logo-wrap {
+        transform: translateY(6px);
+    }
+}
+
+
+
+
+/* адаптив неона*/
+
+@media (max-width: 500px) {
+    .logo.glow {
+        filter:
+            drop-shadow(0 0 4px #7a00ff)
+            drop-shadow(0 0 8px #5a00ff);
+    }
+}
+
+
+/* Адаптив изображения */
+@media (max-height: 800px) {
+    body {
+        background-image: url(img/Chernoff_автомийка_фон_1920х1500.jpg);
+    }
+}
+
+
+
+/* Адаптив кнопок Детейлинг Автомойка и Омывайка*/
+/* Планшеты */
+@media (max-width: 1200px) {
+    .navbar a {
+        font-size: 38px;
+    }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 32px;
+        padding: 5px 10px;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 26px;
+        padding: 3px 6px;
+    }
+}
+
+/* Только для ультраузких экранов */
+@media (max-width: 340px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .navbar a {
+        width: 100%;
+        font-size: 20px;
+        padding: 4px 8px;
+        text-align: center;
+    }
+}
+        /* Подсветка фиолетовая чтобы работала коректно на тач скринах и не залипала*/
+        /* ПК и мышь */
+        @media (hover: hover) and (pointer: fine) {
+        .btn:hover {
+         transform: translateY(-2px);
+         box-shadow: 0 10px 70px #7a00ff;
+     }
+}
+
+        /* Телефоны и тач */
+        @media (hover: none) and (pointer: coarse) {
+        .btn:active {
+            transform: translateY(-2px) scale(0.97);
+            box-shadow: 0 10px 70px #7a00ff;
+    }
+}
+
+
+
+/* Адаптив Отвечает за кнопки автобомиль джип и т.д */
+
+/* Планшеты и маленькие ноуты */
+@media (max-width: 1200px) {
+    .btn-class {
+        width: 220px;
+        font-size: 14px;
+    }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+    .btn-class {
+        width: 45%; /* две кнопки в ряд */
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
+
+/*Адаптив услуг*/
+
+/* ноутбуки */
+@media (max-width: 1400px){
+    .services-content{
+        transform: translateX(-7%);
+        max-width: 800px;
+    }
+}
+
+/* маленькие ноуты */
+@media (max-width: 1200px){
+    .services-content{
+        transform: translateX(-4%);
+        max-width: 90%;
+    }
+}
+
+/* планшеты */
+@media (max-width: 900px){
+    .services-content{
+        transform: none;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-content h2 {
+        line-height: 1.2; /* увеличиваем межстрочный интервал, чтобы текст не слипался */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-content h2 {
+        line-height: 1.3;
+    }
+}
+
+/* Адаптив цены которая идет по правой стороне*/
+@media (min-width: 1600px) {
+
+    .service-price {
+        /* можно добавить padding или margin-right для ещё большего отрыва */
+        margin-left: auto;
+        padding-right: 220px; /* или больше по вкусу */
+    }
+}
+
+/* Большие экраны — прижимаем цену к правому краю */
+@media (min-width: 1400px) {
+    .service-price {
+        margin-left: auto;   /* прижимаем к правому краю строки */
+        padding-right: 40px; /* небольшой отступ от края окна */
+    }
+    
+    .services-content {
+        max-width: 1200px;  /* расширяем контейнер, чтобы было место */
+        transform: none;    /* убираем сдвиг влево */
+    }
+}
+
+
+/*Другой адаптив*/
+@media (max-width: 768px) {
+    .services-content {
+        transform: none !important;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-content {
+        transform: none !important;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .service-row {
+        width: 100%;
+    }
+
+    .service-price {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .clasi {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-class {
+        width: 48%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 340px) {
+    .clasi {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-class {
+        width: 100%;
+        font-size: 13px;
+    }
+}
+
+/* ===== Адаптив для Детейлинга ===== */
+
+/* ноутбуки */
+@media (max-width: 1400px){
+    .services-detailing{
+        transform: translateX(-7%);
+        max-width: 800px;
+    }
+}
+
+/* маленькие ноуты */
+@media (max-width: 1200px){
+    .services-detailing{
+        transform: translateX(-4%);
+        max-width: 90%;
+    }
+}
+
+/* планшеты */
+@media (max-width: 900px){
+    .services-detailing{
+        transform: none;
+        max-width: 100%;
+    }
+}
+
+/* Адаптив цены которая идет по правой стороне — большие экраны */
+@media (min-width: 1600px){
+    .services-detailing .service-price {
+        margin-left: auto;
+        padding-right: 220px; /* можно подвинуть под вкус */
+    }
+}
+
+/* Большие экраны — прижимаем цену к правому краю */
+@media (min-width: 1400px){
+    .services-detailing .service-price {
+        margin-left: auto;
+        padding-right: 40px;
+    }
+
+    .services-detailing{
+        max-width: 1200px;
+        transform: none;
+    }
+}
+
+/* Адаптив под мобильные */
+@media (max-width: 768px){
+    .services-detailing{
+        transform: none !important;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 16px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .services-detailing .service-row{
+        width: 100%;
+    }
+
+    .services-detailing .service-price{
+        margin-left: auto;
+    }
+
+    /* /* Адапитив на размеры текста внутри кнопок легкови джип и т.д* если есть кнопки */
+    .clasi{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-class{
+        width: 48%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 340px) {
+    .clasi {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-class {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+
+/* Адаптив оклейка */
+
+            /*Изображение, премиум все авто и текст к нему */
+/* === Планшет (992px) === */
+@media (max-width: 992px){
+    .service-cards{
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .service-card img{
+        max-width: 280px;
+    }
+
+    .servisse-name,
+    .sservisse-price{
+        font-size: 28px;
+    }
+
+    .tere{
+        font-size: 32px;
+    }
+
+    .service-card h2.name{
+        font-size: 32px;
+    }
+}
+
+/* === Телефон стандарт (576px) === */
+@media (max-width: 576px){
+    .service-cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .service-card img{
+        max-width: 240px;
+    }
+
+    .servisse-name,
+    .sservisse-price{
+        font-size: 22px;
+    }
+
+    .tere{
+        font-size: 26px;
+    }
+
+    .service-card h2.name{
+        font-size: 32px;
+    }
+
+    .price-list{
+        margin-top: 15px;
+        gap: 8px;
+    }
+}
+
+/* === Очень маленькие экраны (340px) === */
+@media (max-width: 340px){
+    .service-card img{
+        max-width: 200px;
+    }
+
+    .servisse-name,
+    .sservisse-price{
+        font-size: 18px;
+    }
+
+    .tere{
+        font-size: 20px;
+    }
+
+    .service-card h2.name{
+        font-size: 28px;
+    }
+
+    .price-list{
+        margin-top: 10px;
+        gap: 5px;
+    }
+}
+
+/* Адаптив кнопики с большим текстом в омывайке*/
+/* планшеты */
+@media (max-width: 1024px) {
+    .btn-clas{
+        max-width: 400px;
+        height: 70px;
+        font-size: 18px;
+    }
+}
+
+/* маленькие планшеты и большие телефоны */
+@media (max-width: 768px) {
+    .btn-clas{
+        max-width: 300px;
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+/* телефоны */
+@media (max-width: 480px) {
+    .btn-clas{
+        max-width: 100%; /* кнопка занимает всю ширину блока */
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+/* адаптив текста перевагы и так далее*/
+    /*1024px (планшеты)*/
+
+    @media (max-width: 1024px){
+    .service-advantages{
+        column-gap: 80px;
+        width: 95%;
+    }
+
+    .enumeration h3{
+        font-size: 24px;
+    }
+
+    .textarea h3,
+    .small{
+        font-size: 30px;
+    }
+}
+
+    /*768px (большие телефоны)*/
+
+    @media (max-width: 768px){
+    .advantages h2{
+        font-size: 32px;
+    }
+
+    .service-advantages{
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+        width: 95%;
+    }
+
+    .enumeration{
+        width: 100%;
+        text-align: center;
+    }
+
+    .enumeration h3{
+        font-size: 20px;
+    }
+
+    .textarea h3,
+    .small{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .img-logo{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .logo-polar img{
+        width: 120px;
+        height: auto;
+    }
+
+    .logo-llumar img{
+        width: 180px;
+        height: auto;
+    }
+}
+
+    /*480px (обычные телефоны)*/
+
+    @media (max-width: 480px){
+    .advantages h2{
+        font-size: 26px;
+    }
+
+    .enumeration h3{
+        font-size: 18px;
+    }
+
+    .textarea h3,
+    .small{
+        font-size: 20px;
+    }
+
+    .end h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .chernof{
+        font-size: 24px;
+    }
+}
+
+    /*340px (очень маленькие экраны)*/
+
+    @media (max-width: 340px){
+    .advantages h2{
+        font-size: 22px;
+    }
+
+    .enumeration h3{
+        font-size: 16px;
+    }
+
+    .textarea h3,
+    .small{
+        font-size: 18px;
+    }
+
+    .logo-polar img{
+        width: 90px;
+    }
+
+    .logo-llumar img{
+        width: 140px;
+    }
+
+    .end h2{
+        font-size: 18px;
+    }
+
+    .chernof{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media (max-width: 768px){
+    .enumeration h2{
+        white-space: normal;
+    }
+}*/
