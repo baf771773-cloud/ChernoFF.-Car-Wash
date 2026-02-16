@@ -28,29 +28,33 @@ const buttons = document.querySelectorAll('.btn-class');
 const blocks = document.querySelectorAll('.service-block');
 const prices = document.querySelectorAll('.price-block');
 
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
+document.querySelectorAll('.tab-block').forEach(tab => {
 
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  const localBtns = tab.querySelectorAll('.btn-class, .btn-clas');
+  const localBlocks = tab.querySelectorAll('.service-block');
+  const localPrices = tab.querySelectorAll('.price-block');
 
-    const target = btn.dataset.target;
-    let activeBlock = null;
+  localBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
 
-    blocks.forEach(block => {
-      const isActive = block.id === target;
-      block.classList.toggle('active', isActive);
-      if (isActive) activeBlock = block;
+      localBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const target = btn.dataset.target;
+
+      localBlocks.forEach(block => {
+        block.classList.toggle('active', block.id === target);
+      });
+
+      localPrices.forEach(price => {
+        price.classList.toggle('active', price.dataset.price === target);
+      });
+
     });
-
-    prices.forEach(price => {
-      price.classList.toggle('active', price.dataset.price === target);
-    });
-
-    // 🔥 грузим картинки в активном блоке
-    loadImages(activeBlock);
   });
+
 });
+
 
 /* =========================
    ВЕРХНЕЕ МЕНЮ (ТАБЫ)
